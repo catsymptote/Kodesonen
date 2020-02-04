@@ -7,7 +7,8 @@ verify_ssl = true
 pytest = "*"
 
 [packages]
-python = "*"
+urllib3 = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
