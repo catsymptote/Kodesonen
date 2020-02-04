@@ -17,9 +17,15 @@ def test_get_str_output():
     assert result is not None
     assert type(result) is str
     
+    assert get_str_output(1) == ''
+    assert get_str_output(2) == ''
     assert get_str_output(3) == 'Pling'
+    assert get_str_output(4) == ''
     assert get_str_output(5) == 'Plang'
+    assert get_str_output(6) == 'Pling'
     assert get_str_output(7) == 'Plong'
+    assert get_str_output(8) == ''
+    assert get_str_output(9) == 'Pling'
     assert get_str_output(15) == 'PlingPlang'
     assert get_str_output(21) == 'PlingPlong'
     assert get_str_output(35) == 'PlangPlong'
