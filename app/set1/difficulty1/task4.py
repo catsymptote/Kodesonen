@@ -1,4 +1,6 @@
 def single_match(balance, weights):
+    """Checks if there is a single weight value solution,
+    and returns this value or None."""
     for weight in weights:
         if balance[0] == weight + balance[1]:
             return weight
@@ -8,6 +10,8 @@ def single_match(balance, weights):
 
 
 def double_balance(balance, w1, w2):
+    """Checks if weight 1 and weight 2 creates
+    a double weight value solution."""
     if balance[0]           == balance[1] + w1 + w2:
         return True
     elif balance[1]         == balance[0] + w1 + w2:
@@ -21,6 +25,7 @@ def double_balance(balance, w1, w2):
 
 
 def double_match(balance, weights):
+    """Checks if there is a double weight value solution."""
     for i1 in range(len(weights)):
         remaining = weights.copy()
         w1 = remaining.pop(i1)
@@ -34,6 +39,10 @@ def double_match(balance, weights):
 
 
 def balancing(balance:list, weights:list):
+    """Attempts to balance the weight balance.
+    If a single solution exists: Return the weight.
+    Else, if a double solution exists: Return the weights.
+    Else: Return None."""
     # Initial tests
     if len(balance) != 2:
         return None

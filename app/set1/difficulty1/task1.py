@@ -1,5 +1,5 @@
-"""Rain drops."""
-
+"""Rain drop sounds, with keys corresponding
+to the factors."""
 rain_results = {
     3 : 'Pling',
     5 : 'Plang',

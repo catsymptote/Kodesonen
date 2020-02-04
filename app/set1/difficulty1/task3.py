@@ -1,3 +1,5 @@
+"""The amount of earth years a year
+on the other planets lasts."""
 year_diff_dict = {
     'Jorden'    : 1,
     'Merkur'    : 0.2408467,
@@ -16,10 +18,13 @@ def sec_to_earth_years(sec):
 
 
 def from_earth_years(planet, earth_years):
+    """Converts from earth years to planet years."""
     return earth_years * year_diff_dict[planet]
 
 
 def print_all(sec):
+    """Prints results for input seconds
+    converted to years on all the planets."""
     result_dict = {}
     for key in year_diff_dict:
         result = from_earth_years(key, sec_to_earth_years(sec))
