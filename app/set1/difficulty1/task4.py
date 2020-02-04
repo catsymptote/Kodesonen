@@ -50,7 +50,6 @@ def balancing(balance:list, weights:list):
     # If not single, maybe double?
     if x is None and len(weights) > 1:
         x = double_match(balance, weights)
-        x.sort()
 
     # Final prints and return.
     if x is None:
