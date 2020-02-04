@@ -22,13 +22,17 @@ def test_double_match():
     assert double_match(balance, weights) == [3, 6]
 
     weights.pop(2)
+    # [1, 2, 6, 14]
     assert double_match(balance, weights) == None
 
     weights.append(5)
+    # [1, 2, 6, 14, 5]
     assert double_match(balance, weights) == [5, 14]
 
     weights.pop(-1)
+    # [1, 2, 6, 14]
     weights.append(-5)
+    # [1, 2, 6, 14, -5]
     assert double_match(balance, weights) == [-5, 14]
 
 
